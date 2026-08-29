@@ -1,0 +1,83 @@
+<!-- <!doctype html>
+<html>
+  <head>
+    <title>Edit Student</title>
+  </head>
+
+  <body>
+    <h1>Edit Student</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <label>Name:</label>
+
+      <input type="text" name="name" value="{{ student.name }}" />
+
+      <br /><br />
+
+      <label>Age:</label>
+
+      <input type="number" name="age" value="{{ student.age }}" />
+
+      <br /><br />
+
+      <label>City:</label>
+
+      <input type="text" name="city" value="{{ student.city }}" />
+
+      <br /><br />
+
+      <button type="submit">Update</button>
+    </form>
+
+    <br />
+
+    <a href="/student/{{ student.id }}/"> Cancel </a>
+  </body>
+</html> -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Edit Student</title>
+  </head>
+
+  <body>
+    <h1>Edit Student</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <label>Name:</label>
+
+      <input type="text" name="name" value="{{ student.name }}" />
+
+      <br /><br />
+
+      <label>Age:</label>
+
+      <input type="number" name="age" value="{{ student.age }}" />
+
+      <br /><br />
+
+      <label>City:</label>
+
+      <input type="text" name="city" value="{{ student.city }}" />
+
+      <br /><br />
+
+      <button type="submit">Update Student</button>
+    </form>
+
+    <br />
+
+    <a href="{% url 'student_detail' student.id %}">
+      Back to Student Details
+    </a>
+
+    <br /><br />
+
+    <a href="{% url 'home' %}"> Back to Home </a>
+  </body>
+</html>

@@ -1,0 +1,714 @@
+<!-- <!doctype html>
+<html>
+  <head>
+    <title>If Else Example</title>
+  </head>
+  <body>
+    {% if is_logged_in %}
+
+    <h1>Welcome Back!</h1>
+
+    {% else %}
+
+    <h1>Please Login</h1>
+
+    {% endif %}
+  </body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+  <head>
+    <title>GET Method</title>
+  </head>
+
+  <body>
+    <h1>Enter Your Name</h1>
+
+    <form method="GET">
+      <input type="text" name="username" />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <hr />
+
+    <h2>Welcome {{ username }}</h2>
+  </body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+  <head>
+    <title>POST Example</title>
+  </head>
+  <body>
+    <h1>Enter Your Name</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <input type="text" name="username" />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Welcome {{ username }}</h2>
+  </body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+  <head>
+    <title>Student Registration</title>
+  </head>
+
+  <body>
+    <h1>Student Registration</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <label>Name:</label>
+      <input type="text" name="name" />
+
+      <br /><br />
+
+      <label>Age:</label>
+      <input type="number" name="age" />
+
+      <br /><br />
+
+      <label>City:</label>
+      <input type="text" name="city" />
+
+      <br /><br />
+
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+  <head>
+    <title>Student Registration</title>
+  </head>
+
+  <body>
+    <h1>Student Registration</h1>
+<!-
+    <Student Registration Form -->
+
+<!-- <form method="POST">
+      {% csrf_token %}
+
+      <label>Name:</label>
+      <input type="text" name="name" />
+
+      <br /><br />
+
+      <label>Age:</label>
+      <input type="number" name="age" />
+
+      <br /><br />
+
+      <label>City:</label>
+      <input type="text" name="city" />
+
+      <br /><br />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <hr />
+
+    Display All Students -->
+
+<!-- <h2>All Students</h2> -->
+
+<!-- <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+      </tr>
+
+      {% for student in students %}
+
+      <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.city }}</td>
+      </tr>
+
+      {% endfor %}
+    </table>
+  </body>
+</html> -->
+<!-- -->
+
+<!-- <!doctype html>
+<html>
+  <head>
+    <title>Student Registration</title>
+  </head>
+
+  <body>
+    <h1>Student Registration</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <label>Name:</label>
+
+      <input type="text" name="name" />
+
+      <br /><br />
+
+      <label>Age:</label>
+
+      <input type="number" name="age" />
+
+      <br /><br />
+
+      <label>City:</label>
+
+      <input type="text" name="city" />
+
+      <br /><br />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <hr />
+
+    <h2>All Students</h2>
+
+    <table border="1">
+      <tr>
+        <th>Name</th>
+
+        <th>Age</th>
+
+        <th>City</th>
+      </tr>
+
+      {% for student in students %}
+
+      <tr>
+        <td>
+          <a href="/student/{{ student.id }}/"> {{ student.name }} </a>
+        </td>
+
+        <td>{{ student.age }}</td>
+
+        <td>{{ student.city }}</td>
+      </tr>
+
+      {% endfor %}
+    </table>
+  </body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+  <head>
+    <title>Student Registration</title>
+  </head>
+
+  <body>
+    <h1>Student Registration</h1>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <label>Name:</label>
+
+      <input type="text" name="name" />
+
+      <br /><br />
+
+      <label>Age:</label>
+
+      <input type="number" name="age" />
+
+      <br /><br />
+
+      <label>City:</label>
+
+      <input type="text" name="city" />
+
+      <br /><br />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <hr />
+
+    <h2>All Students</h2>
+
+    <table border="1">
+      <tr>
+        <th>Name</th>
+
+        <th>Age</th>
+
+        <th>City</th>
+      </tr>
+
+      {% for student in students %}
+
+      <tr>
+        <td>
+          <a href="/student/{{ student.id }}/"> {{ student.name }} </a>
+        </td>
+
+        <td>{{ student.age }}</td>
+
+        <td>{{ student.city }}</td>
+      </tr>
+
+      {% endfor %}
+    </table>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Registration</title>
+
+</head>
+
+<body>
+
+    <h1>Student Registration</h1>
+
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <label>Name:</label>
+
+        <input type="text" name="name">
+
+        <br><br>
+
+
+        <label>Age:</label>
+
+        <input type="number" name="age">
+
+        <br><br>
+
+
+        <label>City:</label>
+
+        <input type="text" name="city">
+
+        <br><br>
+
+
+        <button type="submit">
+
+            Register
+
+        </button>
+
+    </form>
+
+
+    <hr>
+
+
+    <h2>All Students</h2>
+
+
+    <table border="1">
+
+        <tr>
+
+            <th>Name</th>
+
+            <th>Age</th>
+
+            <th>City</th>
+
+        </tr>
+
+
+        {% for student in students %}
+
+        <tr>
+
+            <td>
+
+                <a href="/student/{{ student.id }}/">
+
+                    {{ student.name }}
+
+                </a>
+
+            </td>
+
+
+            <td>
+
+                {{ student.age }}
+
+            </td>
+
+
+            <td>
+
+                {{ student.city }}
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+</head>
+
+<body>
+
+    <h1>Student Registration</h1>
+
+    REGISTER STUDENT -->
+
+<!-- <form method="POST">
+
+        {% csrf_token %}
+
+        <label>Name:</label>
+        <input type="text" name="name">
+
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" name="age">
+
+        <br><br>
+
+        <label>City:</label>
+        <input type="text" name="city">
+
+        <br><br>
+
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+    <hr>
+
+
+    SEARCH STUDENT
+
+    <!- <h2>Search Student</h2> -->
+
+<!-- <form method="GET">
+
+        <input -->
+<!-- type="text"
+            name="search"
+            placeholder="Enter student name"  -->
+
+<!-- <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+    <hr>
+ -->
+
+<!-- ALL STUDENTS -->
+
+<!-- <h2>All Students</h2>
+
+    <table border="1">
+
+        <tr>
+
+            <th>Name</th>
+
+            <th>Age</th>
+
+            <th>City</th>
+
+        </tr>
+
+
+        {% for student in students %}
+
+        <tr>
+
+            <td>
+
+                <a href="{% url 'student_detail' student.id %}">
+                    {{ student.name }}
+                </a>
+              -->
+<!-- </td>
+
+            <td>
+                {{ student.age }}
+            </td>
+
+            <td>
+                {{ student.city }}
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html> ->
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Registration</title>
+
+</head>
+
+<body>
+
+
+    <h1>Student Registration</h1>
+
+
+    REGISTER STUDENT
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+
+    <hr>
+
+
+    <!- SEARCH STUDENT -->
+
+<!-- <h2>Search Student</h2>
+
+    <form method="GET">
+
+        <input
+            type="text"
+            name="search"
+            placeholder="Enter student name"
+        >
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form> -->
+
+<!-- <hr> -->
+<!-- 
+
+    <!- STUDENT LIST -->
+
+<!-- <h2>All Students</h2>
+
+
+    <table border="1">
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Name</th>
+
+            <th>Age</th>
+
+            <th>City</th>
+
+        </tr> -->
+
+<!-- {% for student in students %}
+
+        <tr>
+
+            <td>
+                {{ student.id }}
+            </td>
+
+
+            <td>
+
+                <a href="{% url 'student_detail' student.id %}">
+
+                    {{ student.name }} -->
+
+<!-- </a>
+
+            </td>
+
+
+            <td>
+                {{ student.age }}
+            </td>
+
+
+            <td>
+                {{ student.city }}
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+</body>
+<!-
+#</html> -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Student Registration</title>
+  </head>
+
+  <body>
+    <h1>Student Registration</h1>
+
+    <!-- REGISTER STUDENT -->
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <!-- NAME -->
+
+      <label> {{ form.name.label }} </label>
+
+      {{ form.name }} {% for error in form.name.errors %}
+
+      <p>{{ error }}</p>
+
+      {% endfor %}
+
+      <br /><br />
+
+      <!-- AGE -->
+
+      <label> {{ form.age.label }} </label>
+
+      {{ form.age }} {% for error in form.age.errors %}
+
+      <p>{{ error }}</p>
+
+      {% endfor %}
+
+      <br /><br />
+
+      <!-- CITY -->
+
+      <label> {{ form.city.label }} </label>
+
+      {{ form.city }} {% for error in form.city.errors %}
+
+      <p>{{ error }}</p>
+
+      {% endfor %}
+
+      <br /><br />
+
+      <!-- NON-FIELD ERRORS -->
+
+      {% for error in form.non_field_errors %}
+
+      <p>{{ error }}</p>
+
+      {% endfor %}
+
+      <button type="submit">Register</button>
+    </form>
+
+    <hr />
+
+    <!-- SEARCH -->
+
+    <h2>Search Student</h2>
+
+    <form method="GET">
+      <input type="text" name="search" placeholder="Enter student name" />
+
+      <button type="submit">Search</button>
+    </form>
+
+    <hr />
+
+    <!-- STUDENTS -->
+
+    <h2>All Students</h2>
+
+    <table border="1">
+      <tr>
+        <th>ID</th>
+
+        <th>Name</th>
+
+        <th>Age</th>
+
+        <th>City</th>
+      </tr>
+
+      {% for student in students %}
+
+      <tr>
+        <td>{{ student.id }}</td>
+
+        <td>
+          <a href="{% url 'student_detail' student.id %}">
+            {{ student.name }}
+          </a>
+        </td>
+
+        <td>{{ student.age }}</td>
+
+        <td>{{ student.city }}</td>
+      </tr>
+
+      {% endfor %}
+    </table>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Student Details</title>
+  </head>
+
+  <body>
+    <h1>Student Details</h1>
+
+    <p>
+      <strong>ID:</strong>
+      {{ student.id }}
+    </p>
+
+    <p>
+      <strong>Name:</strong>
+      {{ student.name }}
+    </p>
+
+    <p>
+      <strong>Age:</strong>
+      {{ student.age }}
+    </p>
+
+    <p>
+      <strong>City:</strong>
+      {{ student.city }}
+    </p>
+
+    <hr />
+
+    <h2>Profile Details</h2>
+
+    {% if student.profile %}
+
+    <p>
+      <strong>Phone:</strong>
+      {{ student.profile.phone }}
+    </p>
+
+    <p>
+      <strong>Address:</strong>
+      {{ student.profile.address }}
+    </p>
+
+    {% else %}
+
+    <p>No profile available.</p>
+
+    {% endif %}
+
+    <hr />
+
+    <h2>Courses</h2>
+
+    {% for course in student.courses.all %}
+
+    <p>{{ course.name }}</p>
+
+    {% empty %}
+
+    <p>No courses available.</p>
+
+    {% endfor %}
+
+    <hr />
+
+    <a href="{% url 'student_edit' student.id %}"> Edit Student </a>
+
+    <br /><br />
+
+    <a href="{% url 'home' %}"> Back </a>
+  </body>
+</html>
